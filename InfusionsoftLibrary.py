@@ -1,13 +1,11 @@
+from xmlrpclib import ServerProxy, Error
+
 class Infusionsoft:
-    
-    from xmlrpclib import ServerProxy, Error
-    
-    def __init__(self, name, api_key, server = ServerProxy, error = Error):
-        self.client = server("https://" + name + ".infusionsoft.com/api/xmlrpc")
-        self.client.error = error
+    def __init__(self, name, api_key):
+        self.client = ServerProxy("https://" + name + ".infusionsoft.com/api/xmlrpc")
+        self.client.error = Error
         self.key = api_key
-        return None
-    
+
     def __getattr__(self, service):
         def function(method, *args):
             call = getattr(self.client, service + '.' + method)
