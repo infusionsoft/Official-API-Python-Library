@@ -7,7 +7,7 @@ clone and run: ``python setup.py install``
 
 or
 
-``pip install git+https://github.com/infusionsoft/Official-API-Python-Library``
+``pip install git+https://github.com/infusionsoft/Official-API-Python-Library.git``
 
 
 ## Usage
