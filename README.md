@@ -4,7 +4,7 @@ Allows for quick setup and usage of the Infusionsoft XML-RPC API  using Python's
 ## Usage
 First, make sure you import the Infusionsoft class:
 
-	from InfusionsoftLibrary import Infusionsoft
+	from infusionsoft.library import Infusionsoft
 
 Now set your Infusionsoft account name and API key:
 

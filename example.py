@@ -1,4 +1,4 @@
-from InfusionsoftLibrary import Infusionsoft
+from infusionsoft.library import Infusionsoft
 
 infusionsoft = Infusionsoft('Infusionsoft Account Name', 'API Key Goes Here')
 
