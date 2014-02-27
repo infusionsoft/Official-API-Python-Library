@@ -1,6 +1,15 @@
 # Infusionsoft API Python Wrapper
 Allows for quick setup and usage of the Infusionsoft XML-RPC API  using Python's native XML-RPC support. Find more info at http://help.infusionsoft.com/developers/api-basics/
 
+## Installation
+
+clone and run: ``python setup.py install``
+
+or
+
+``pip install git+https://github.com/infusionsoft/Official-API-Python-Library``
+
+
 ## Usage
 First, make sure you import the Infusionsoft class:
 
