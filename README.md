@@ -18,6 +18,21 @@ You can accomplish the same thing using the server library method to access the 
 
 	infusionsoft.server().service.method(infusionsoft.key, args)
 
+#### OAuth Usage
+
+If you are using OAuth, you can instantiate the library using the InfusionsoftOAuth class. The only 
+usage difference is that initialization only requires 1 argument (the OAuth access_token).
+
+```python
+from infusionsoft.library import InfusionsoftOAuth
+
+infusionsoft = InfusionsoftOAuth(access_token)
+```
+
+For more information on OAuth, see the Infusionsoft docs:
+
+https://developer.infusionsoft.com/docs/read/Getting_Started_With_OAuth2
+
 ## Examples
 
 ### Example 1: Add a Contact
