@@ -18,3 +18,10 @@ class Infusionsoft:
 
     def server(self):
         return self.client
+
+class InfusionsoftOAuth(Infusionsoft):
+
+    def __init__(self, access_token):
+        self.client = ServerProxy("https://api.infusionsoft.com/crm/xmlrpc/v1?access_token=%s" % access_token)
+        self.client.error = Error
+        self.key = access_token
