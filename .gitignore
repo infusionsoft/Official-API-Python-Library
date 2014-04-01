@@ -1,1 +1,16 @@
-*.pyc
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+develop-eggs
+
+
+.DS_Store
