@@ -1,4 +1,7 @@
-from xmlrpc.client import ServerProxy, Error
+try:
+    from xmlrpc.client import ServerProxy, Error
+except ImportError:
+    from xmlrpclib import ServerProxy, Error
 
 class Infusionsoft:
 
