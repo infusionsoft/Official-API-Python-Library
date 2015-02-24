@@ -1,7 +1,12 @@
-try:
+import sys
+
+if sys.version_info[0] == 3:
     from xmlrpc.client import ServerProxy, Error
-except ImportError:
+elif sys.version_info[0] == 2:
     from xmlrpclib import ServerProxy, Error
+else:
+    print('Unrecognised python environment. Not python 2.x or 3.x')
+    
 
 class Infusionsoft:
 
