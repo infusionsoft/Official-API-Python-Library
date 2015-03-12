@@ -76,3 +76,15 @@ print(infusionsoft.FileService('getDownloadUrl', fileId))
 #----------------------------------------------------------------------------------------
 contact = {'FirstName' : 'John', 'LastName' : 'Doe', 'Email' : 'johndoe@email.com'}
 print(infusionsoft.server().ContactService.add(infusionsoft.key, contact))
+
+# Example 12: Find the total number of contacts using the data service
+#----------------------------------------------------------------------------------------
+table = 'Contact'
+query = {'AccountId': '%'}
+print(infusionsoft.DataService('count', table, query)
+
+# Example 13: Find the number of contacts for a given lead source with the data service
+#----------------------------------------------------------------------------------------
+table = 'Contact'
+query = {'Leadsource': 'example leadsource name'}
+print(infusionsoft.DataService('count', table, query)
