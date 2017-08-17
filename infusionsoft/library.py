@@ -1,4 +1,7 @@
-from xmlrpclib import ServerProxy, Error
+try:
+    from xmlrpclib import ServerProxy, Error
+except ImportError:
+    from xmlrpc.client import ServerProxy, Error
 
 
 class Infusionsoft(object):
@@ -13,11 +16,7 @@ class Infusionsoft(object):
     def __getattr__(self, service):
         def function(method, *args):
             call = getattr(self.client, service + '.' + method)
-            try:
-                return call(self.key, *args)
-            except self.client.error, v:
-                return "ERROR", v
-        return function
+            return call(self.key, *args)
 
     def server(self):
         return self.client
