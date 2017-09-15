@@ -16,7 +16,13 @@ class Infusionsoft(object):
     def __getattr__(self, service):
         def function(method, *args):
             call = getattr(self.client, service + '.' + method)
-            return call(self.key, *args)
+
+            try:
+                return call(self.key, *args)
+            except self.client.error as v:
+                return "ERROR", v
+
+        return function
 
     def server(self):
         return self.client
